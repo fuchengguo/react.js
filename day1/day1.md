@@ -52,4 +52,62 @@ ReactDOM.render(
 
 # 表达式
 
+## 字符串
+```js
+let name = "hello world"
+<p>{name}</p>
+```
 
+## 对象
+```js
+let obj = {
+	place: "qd",
+	interest:["ps","css","js"]
+}
+<p>{obj.interest[0]}</p>
+```
+
+## 数组
+
+```js
+let arr = ["ps","css","js"]
+<p>{arr[2]}</p>
+
+let arrHTML = [<li key="1">1</li>,<li key="2">2</li>,<li key="3">3</li>]
+<ul>{arrHTML}</ul>
+```
+
+## 布尔值
+```js
+let bool = true
+<p>{bool?"真的":"假的"}</p>
+```
+
+## 数字
+```js
+let num = 1
+<p>{num}</p>
+```
+
+## 函数
+```js
+let output = function(){
+	let name = "hello world2"
+	return name
+}
+<h1>{output()}</h1>
+```
+
+## 
+
+# 组件
+
+组件首字母大写
+```
+let K3 = React.createClass({
+	render:function(){
+		return <div>组件</div>
+	}
+})
+//<K3 />
+```

@@ -10,6 +10,11 @@
 		<div id="demo"></div>
 		<script src="../js/vue.js"></script>
 		<script>
+			Vue.component("k3",{
+				template:`
+					<div>组件</div>
+				`
+			})
 			new Vue({
 				el: "#demo",
 				/*render: function(createElement) {
@@ -18,10 +23,16 @@
 				data:{
 					content:"hello world!"
 				},
-				
+				methods:{
+					test:function(){
+						console.log("ok")
+					}
+				},
 				template:`
 					<div>
 						<h1>{{content}}</h1>
+						<k3 />
+						<button @click="test">ok</button>
 					</div>
 				`
 			})
