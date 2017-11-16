@@ -13,6 +13,11 @@
 		<!--把JSX/ES6+转为ES5-->
 		<script src="../js/babel.js"></script>
     <script type="text/babel">
+			class Welcome extends React.Component {
+			  render() {
+			    return <h1>Hello</h1>;
+			  }
+			}
       var Selectcp = React.createClass({
         getSelectValue(){
         },
@@ -25,13 +30,13 @@
           )
         },
         componentDidMount(){
-          $("p")
           console.log(this.refs.name)
         }
       })
       ReactDOM.render(
         <div>
           <Selectcp />
+					<Welcome />
         </div>,
         document.getElementById("demo")
       )
